@@ -1,5 +1,7 @@
 package com.spring.restaurant.model;
 
+import net.minidev.json.annotate.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -11,6 +13,7 @@ import java.util.Set;
 public class Category extends  CategoryOrder{
 
     @OneToMany(mappedBy = "category")
+    @JsonIgnore
     private Set<Order> orrders;
 
 }
